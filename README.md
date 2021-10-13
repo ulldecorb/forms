@@ -1,6 +1,6 @@
 # forms
 
-## Genereal Info  
+## General Info  
 Html form's gallery
 
 ## Technologies
