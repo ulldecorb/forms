@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <form action="results.html" method="GET">
+    <form action="results.html" method="GET" enctype="multipart/form-data">
         <div>
             <label for="user">Name:</label><br>
             <input type="text" id="user" name="fname"><br>
@@ -18,7 +18,75 @@
             <input type="password" id="password" name="password">
         </div>
         <div>
-            <!-- <label for=""></label> -->
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" min="3" max="8">
+        </div>
+        <div>
+            <label for="date">Birthday:</label>
+            <input type="date" name="date" id="date" min="1945-01-01" max="2016-02-16">
+        </div>
+        <div>What wear your foots?
+            <div>
+                <label for="Socks">Socks</label>
+                <input type="checkbox" name="Socks" id="Socks">
+            </div>
+            <div>
+                <label for="Boots">Boots</label>
+                <input type="checkbox" name="Boots" id="Boots">
+            </div>
+            <div>
+                <label for="None">None</label>
+                <input type="checkbox" name="None" id="None">
+            </div>
+        </div>
+        <div>Best Samurai:
+            <div>
+                <label for="jack">Jack</label>
+                <input type="radio" name="samurai" id="jack" value="Jack">
+            </div>
+            <div>
+                <label for="usagi">Usagi Yojimbo</label>
+                <input type="radio" name="samurai" id="usagi" value="Usagi Yojimbo">
+            </div>
+            <div>
+                <label for="Manji">Manji</label>
+                <input type="radio" name="samurai" id="Manji" value="Manji">
+            </div>
+        </div>
+        <div>
+            <label for="speech">Best speech</label>
+            <select name="speech" id="speech" multiple>
+                <option value="One Failure more close to SUCCESS!!!">One Failure more close to Success</option>
+                <option value="Better than yesterday, worse than tomorrow">Better than yesterday, worse than tomorrow</option>
+                <option value="It's time to relax">It's time to relax</option>
+                <option value="It's time to relax">I miss something...</option>
+                <option value="GRUaRRRRrrrr-ggggggggggGGGHTX!">GRUaRRRRrrrr-ggggggggggGGGHTX!</option>
+            </select>
+        </div>
+        <div>
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio"></textarea>
+        </div>
+        <input type="hidden" name="hidden" value="Hello World!">
+        <div>
+            <label for="file">File:</label>
+            <input type="file" name="file" id="file">
+        </div>
+        <div>
+            <label for="url">URL de seguridad:</label>
+            <input type="url" name="url" id="url">
+        </div>
+        <div>
+            <label for="color">Color Eyes:</label>
+            <input type="color" name="color" id="color" value="#6ba6e6">
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
         </div>
         <button type="reset">Reset</button>
         <button type="submit">Submit</button>
