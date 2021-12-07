@@ -9,11 +9,31 @@
 <body>
     <div id="results"></div>
     <a href="./index.html">Back to Forms</a>
+    <section name="result">
+        <div class="image">
+
+        </div>
+        <div class="text">
+            <span id="name" class="text__name"></span>
+            <span id="password" class="text__password"></span>
+            <span id="phone" class="text__phone"></span>
+            <span id="speech" class="text__speech"></span>
+        </div>
+    </section>
     <script>
+        const user =  document.getElementById('name');
+        const phone =  document.getElementById('phone');
+        const password =  document.getElementById('password');
+        const speech =  document.getElementById('speech');
         const resultsList = document.getElementById('results');
         new URLSearchParams(window.location.search).forEach((value,
         name) => {
+
+            name === 'name' && (user.innerText = `${value}`)
             name === 'color' && (document.body.style.backgroundColor = `${value}`)
+            name === 'password' && (password.innerText = `${value}`)
+            name === 'phone' && (phone.innerText = `${value}`)
+            name === 'speech' && (speech.innerText = `${value}`)
             resultsList.append(`${name}: ${value}`);
             resultsList.append(document.createElement('br'));
         });
