@@ -71,7 +71,7 @@
             <label for="bio">Bio</label>
             <textarea name="bio" id="bio"></textarea>
         </div>
-        <input type="hidden" name="hidden" value="Hello World!">
+        <input type="hidden" id="hidden" name="hidden" value="Hello World!">
         <div>
             <label for="file">File:</label>
             <input type="file" name="file" id="file">
@@ -92,4 +92,17 @@
         <button type="submit">Submit</button>
     </form>
 </body>
+<script>
+    let clickCounter = 0;
+    let keyCounter = 0;
+    document.addEventListener('click', () => {
+        clickCounter ++;
+        const hidden = document.getElementById('hidden').value = `${clickCounter},${keyCounter}`;
+    });
+    document.addEventListener('keydown', () => {
+        keyCounter ++;
+        const hidden = document.getElementById('hidden').value = `${clickCounter},${keyCounter}`;
+    });
+    
+</script>
 </html>
